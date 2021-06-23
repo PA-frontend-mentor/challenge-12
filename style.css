@@ -1,8 +1,255 @@
+:root {
+  --clr-primary: hsl(0, 0%, 59%);
+  --clr-secondary: hsl(209, 33%, 12%);
+  --clr-error: hsl(354, 100%, 66%);
+  --clr-btn: hsl(223, 100%, 88%);
+  --bg-btn: hsl(223, 87%, 63%);
+  --border-radius: 100px;
+}
+
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 300;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main {
+  width: 90%;
+  max-width: 650px;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main > img:nth-of-type(1) {
+  margin: 65px 0 65px 0;
+}
+
+main > h1 {
+  color: var(--clr-primary);
+  font-size: clamp(22px, 2.5vw, 32px);
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main > h1 > span {
+  color: var(--clr-secondary);
+  font-size: 1em;
+  font-weight: 700;
+  letter-spacing: normal;
+}
+
+main > p {
+  font-size: 18px;
+  font-size: clamp(14px, 1.6vw, 18px);
+  margin-bottom: 50px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+main .input-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: clamp(48px, 9vw, 55px);
+  gap: 20px;
+}
+
+main .input-form > * {
+  height: 100%;
+  border-radius: var(--border-radius);
+  font-size: clamp(15px, 1.5vw, 18px) !important;
+}
+
+main .input-form > input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 18px;
+  padding-left: 2em;
+  color: var(--clr-primary);
+  border: 0.5px solid var(--clr-btn);
+}
+
+main .input-form > input:focus {
+  outline: none;
+}
+
+main .input-form > input::-webkit-input-placeholder {
+  opacity: 0.7;
+}
+
+main .input-form > input:-ms-input-placeholder {
+  opacity: 0.7;
+}
+
+main .input-form > input::-ms-input-placeholder {
+  opacity: 0.7;
+}
+
+main .input-form > input::placeholder {
+  opacity: 0.7;
+}
+
+main .input-form > button {
+  width: 200px;
+  background: var(--bg-btn);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 10px 0px var(--bg-btn);
+          box-shadow: 0 0 10px 0px var(--bg-btn);
+}
+
+main .input-form > button:hover {
+  background: #4576f2;
+}
+
+main .input-form > button:active {
+  background: #376cf1;
+}
+
+@media screen and (max-width: 650px) {
+  main .input-form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 30px;
+  }
+  main .input-form > input,
+  main .input-form > button {
+    width: 90%;
+    min-width: 300px;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
+  }
+}
+
+main > img:nth-of-type(2) {
+  width: 100%;
+  height: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-top: auto;
+}
+
+main footer {
+  margin-top: auto;
+  margin-bottom: 55px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main footer .logos {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+main footer .logos div {
+  width: 40px;
+  height: 40px;
+  background: #527cec;
+  cursor: pointer;
+}
+
+main footer .logos div:hover {
+  background: #3b6be9;
+}
+
+main footer .logos div:active {
+  background: #2459e7;
+}
+
+main footer .logos div:nth-child(1) {
+  -webkit-mask: url(./images/facebook.svg) no-repeat center;
+          mask: url(./images/facebook.svg) no-repeat center;
+  -webkit-mask-size: 25px;
+          mask-size: 25px;
+}
+
+main footer .logos div:nth-child(2) {
+  -webkit-mask: url(./images/logo-twitter.svg) no-repeat center;
+          mask: url(./images/logo-twitter.svg) no-repeat center;
+  -webkit-mask-size: 25px;
+          mask-size: 25px;
+}
+
+main footer .logos div:nth-child(3) {
+  -webkit-mask: url(./images/logo-instagram.svg) no-repeat center;
+          mask: url(./images/logo-instagram.svg) no-repeat center;
+  -webkit-mask-size: 25px;
+          mask-size: 25px;
+}
+
+main footer > p {
+  font-size: 12px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 /*# sourceMappingURL=style.css.map */
