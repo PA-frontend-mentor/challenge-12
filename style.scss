@@ -65,6 +65,8 @@ main {
   }
 
   .input-form {
+    position: relative;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,6 +98,22 @@ main {
       }
     }
 
+    & > .error {
+      border: 1px solid var(--clr-error);
+
+      &::placeholder {
+        color: var(--clr-error);
+      }
+    }
+
+    & > .msg-error {
+      color: var(--clr-error);
+    }
+
+    & > .msg-success {
+      color: var(--bg-btn);
+    }
+
     & > button {
       width: 200px;
       background: var(--bg-btn);
@@ -122,6 +140,19 @@ main {
         min-width: 300px;
         flex: none;
       }
+
+      span {
+        transform: translateY(392%) !important;
+      }
+    }
+
+    & > span {
+      position: absolute;
+      left: 35px;
+      bottom: 0;
+      transform: translateY(130%);
+      height: fit-content;
+      font-size: clamp(13px, 1.5vw, 15px) !important;
     }
   }
 

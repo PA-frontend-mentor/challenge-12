@@ -80,6 +80,7 @@ main > p {
 }
 
 main .input-form {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,6 +131,34 @@ main .input-form > input::placeholder {
   opacity: 0.7;
 }
 
+main .input-form > .error {
+  border: 1px solid var(--clr-error);
+}
+
+main .input-form > .error::-webkit-input-placeholder {
+  color: var(--clr-error);
+}
+
+main .input-form > .error:-ms-input-placeholder {
+  color: var(--clr-error);
+}
+
+main .input-form > .error::-ms-input-placeholder {
+  color: var(--clr-error);
+}
+
+main .input-form > .error::placeholder {
+  color: var(--clr-error);
+}
+
+main .input-form > .msg-error {
+  color: var(--clr-error);
+}
+
+main .input-form > .msg-success {
+  color: var(--bg-btn);
+}
+
 main .input-form > button {
   width: 200px;
   background: var(--bg-btn);
@@ -164,6 +193,22 @@ main .input-form > button:active {
         -ms-flex: none;
             flex: none;
   }
+  main .input-form span {
+    -webkit-transform: translateY(392%) !important;
+            transform: translateY(392%) !important;
+  }
+}
+
+main .input-form > span {
+  position: absolute;
+  left: 35px;
+  bottom: 0;
+  -webkit-transform: translateY(130%);
+          transform: translateY(130%);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  font-size: clamp(13px, 1.5vw, 15px) !important;
 }
 
 main > img:nth-of-type(2) {
